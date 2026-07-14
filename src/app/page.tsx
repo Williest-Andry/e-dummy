@@ -21,9 +21,7 @@ export default function LoginPage() {
     resolver: zodResolver(AuthLoginSchema),
   });
 
-  const { mutate: login, isPending, isError, error, data } = useLogin();
-  console.log("error : ", error);
-  console.log("data : ", data);
+  const { mutate: login, isPending, isError, isSuccess } = useLogin();
 
   const sendCredentials: SubmitHandler<AuthLogin> = (
     data: AuthLogin,
@@ -79,7 +77,7 @@ export default function LoginPage() {
           />
 
           <Field orientation="responsive">
-            <Button type="submit" disabled={isPending}>
+            <Button type="submit" disabled={isPending || isSuccess}>
               {isPending ? <Spinner /> : "Login"}
             </Button>
           </Field>

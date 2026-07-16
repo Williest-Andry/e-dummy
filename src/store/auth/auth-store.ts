@@ -1,4 +1,5 @@
 import { AuthLoginResponse } from "@/interface/auth/auth-type";
+import { redirect } from "next/navigation";
 import { create } from "zustand";
 
 export const saveTokens = (accessToken: string, refreshToken: string) => {
@@ -16,6 +17,11 @@ export const getRefreshToken = () => {
   return typeof window !== "undefined"
     ? localStorage.getItem("refreshToken")
     : "";
+};
+
+export const logout = () => {
+  localStorage.clear();
+  redirect("/");
 };
 
 export const useAuthStore = create<AuthLoginResponse>((set) => ({

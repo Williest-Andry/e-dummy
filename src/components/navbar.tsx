@@ -46,7 +46,7 @@ export default function NavBar() {
   };
 
   return (
-    <nav className="flex justify-between items-center mt-2 px-6 pb-2 border-b border-b-gray-200">
+    <nav className="flex justify-between items-center mt-2 px-6 pb-2 border-b border-b-gray-200 sticky top-10 align-top">
       <div className="flex gap-6 items-center">
         <Drawer
           swipeDirection="left"

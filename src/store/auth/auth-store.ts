@@ -1,4 +1,4 @@
-import { AuthLoginResponse } from "@/interface/auth/auth-type";
+import { AuthLoginResponse } from "@/interfaces/auth/auth-type";
 import { redirect } from "next/navigation";
 import { create } from "zustand";
 

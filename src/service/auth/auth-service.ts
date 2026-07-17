@@ -1,4 +1,4 @@
-import { AuthLoginResponse } from "@/interface/auth/auth-type";
+import { AuthLoginResponse } from "@/interfaces/auth/auth-type";
 import { axiosDummyClient, catchError } from "@/lib/axios";
 import { AuthLogin } from "@/schema/auth/auth-schema";
 

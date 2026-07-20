@@ -7,3 +7,10 @@ export function usePosts() {
     queryFn: () => postService.getAll,
   });
 }
+
+export function usePost(id: number) {
+  return useQuery({
+    queryKey: ["posts", id],
+    queryFn: () => postService.getOne(id),
+  });
+}
